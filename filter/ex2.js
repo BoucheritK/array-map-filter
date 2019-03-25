@@ -14,9 +14,15 @@ Exemple d'entrée:
   [-10, 5, 15, 20]
 
  */
+const numbersArray = [-12, -10, -7, -1, 5, 8, 11, 15, 20, 27];
+const multiple = 5;
 
-function getMultiplesOf(numbers, n) {
-}
+const result = numbersArray.filter(function getMultiplesOf(num) {
+  if (num % multiple === 0)
+    return num
+});
+console.log(result);
+
 
 // Ne pas modifier l'export
 module.exports = getMultiplesOf;
