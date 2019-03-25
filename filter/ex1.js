@@ -10,9 +10,12 @@ Sortie attendue:
   [7, 2, 0, 3, 11]
 
  */
+const numbers = [7, -4, 2, 0, -10, 3, 11];
+const zeroOrMore = numbers.filter(function getPositiveNumbers(number){
+  return number >= 0
+});
+console.log(zeroOrMore);
 
-function getPositiveNumbers(numbers) {
-}
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node filter/ex1
