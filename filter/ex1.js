@@ -11,10 +11,16 @@ Sortie attendue:
 
  */
 const numbers = [7, -4, 2, 0, -10, 3, 11];
-const zeroOrMore = numbers.filter(function getPositiveNumbers(number){
-  return number >= 0
-});
-console.log(zeroOrMore);
+
+
+const getPositiveNumbers = (tableau)=> {
+  return tableau.filter(x => {
+    if (x >= 0){
+      return x
+    }
+  }) 
+};
+console.log(getPositiveNumbers(numbers));
 
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
@@ -22,4 +28,4 @@ console.log(zeroOrMore);
 // console.log(getPositiveNumbers([-2, -1, 0, 1, 2]));
 
 // Ne pas modifier l'export
-module.exports = getPositiveNumbers;
+// module.exports = getPositiveNumbers;
