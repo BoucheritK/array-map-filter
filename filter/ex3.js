@@ -30,11 +30,15 @@ const allNames = [
   'Yara Greyjoy',
   'Sansa Stark'
 ]
-const stark = allNames.filter(function keepStarks(name) {
-  if (name.endsWith('Stark'))
-    return name
-});
-console.log(stark);
+const keepStarks = tableau => {
+  return tableau.filter(x => {
+    if (x.includes("Stark")){
+      return x
+    }
+  })
+}
+
+console.log(keepStarks(allNames))
 
 
 // Ne pas modifier l'export

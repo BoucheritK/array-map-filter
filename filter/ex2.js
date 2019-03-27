@@ -17,12 +17,15 @@ Exemple d'entrée:
 const numbersArray = [-12, -10, -7, -1, 5, 8, 11, 15, 20, 27];
 const multiple = 5;
 
-const result = numbersArray.filter(function getMultiplesOf(num) {
-  if (num % multiple === 0)
-    return num
-});
-console.log(result);
+const getMultiplesOf = (tableau, number)=> {
+  return tableau.filter(x => {
+    if (x % number === 0) {
+      return x
+    }
+  })
+};
 
+console.log(getMultiplesOf(numbersArray, multiple))
 
 // Ne pas modifier l'export
 module.exports = getMultiplesOf;

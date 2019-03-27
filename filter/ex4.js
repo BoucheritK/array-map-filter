@@ -36,12 +36,17 @@ const produits = [
 ]
 const prixMax = 500
 
-function filterOnPrice(price) {
-  return price.filter(x => {if (x.price <= prixMax) {
-    return x;
-  }})
+const filterOnPrice = (price) => {
+  return price.filter(x => {
+    if (x.price <= prixMax){
+      return x;
+    }
+  })
 }
 console.log(filterOnPrice(produits))
+
+
+
 
 
 // Ne pas modifier l'export
