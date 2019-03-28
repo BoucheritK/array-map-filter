@@ -61,14 +61,16 @@ En sortie: [
   }
 ]
 
-const getFoodCategories = food.map (function(aliment) {
-  if (aliment.isVegetarian === true){
-    return aliment.food + " is suitable for vegetarians"
-  }else {
-    return aliment.food + " is not suitable for vegetarians"
-  }
-})
-console.log(getFoodCategories)
+const getFoodCategories = (tableauDAliments) => {
+  return tableauDAliments.map(aliment =>{
+    if (aliment.isVegetarian === true){
+      return aliment.food + " is suitable for vegetarians"
+    }else {
+      return aliment.food + " is not suitable for vegetarians"
+    }
+  })
+}
+console.log(getFoodCategories(food))
 
 
 //Ne pas modifier l'export

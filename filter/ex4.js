@@ -36,14 +36,10 @@ const produits = [
 ]
 const prixMax = 500
 
-const filterOnPrice = (price) => {
-  return price.filter(x => {
-    if (x.price <= prixMax){
-      return x;
-    }
-  })
+const filterOnPrice = (tableau, price) => {
+  return tableau.filter(ligne => ligne.price <= price)
 }
-console.log(filterOnPrice(produits))
+console.log(filterOnPrice(produits, prixMax))
 
 
 
