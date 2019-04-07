@@ -50,11 +50,14 @@ const moviesNames = [
 const research = 'revenge'
 
 
-const searchWordFilter=(tableau, terme) => {
+const searchWordFilter = (tableau, terme) => {
   return tableau.filter(x => {
-    if (x.toLowerCase().includes(terme.toLowerCase())) {
-      return x;
+    for (i = 0; i < tableau.length - 1; i++) {
+      if (x.toLowerCase().includes(terme.toLowerCase())) {
+        return true;
+      }
     }
+    return false 
   })
 }
 

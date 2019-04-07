@@ -13,12 +13,16 @@ Sortie attendue:
 const numbers = [7, -4, 2, 0, -10, 3, 11];
 
 
-const getPositiveNumbers = (tableau)=> {
+const getPositiveNumbers = (tableau) => {
   return tableau.filter(x => {
-    if (x >= 0){
-      return x
+    for (i = 0; i < tableau.length -1; i++) {
+      if (x >= 0) {
+        return true
+      }
     }
-  }) 
+    return false 
+  })
+
 };
 console.log(getPositiveNumbers(numbers));
 

@@ -17,11 +17,14 @@ Exemple d'entrée:
 const numbersArray = [-12, -10, -7, -1, 5, 8, 11, 15, 20, 27];
 const multiple = 5;
 
-const getMultiplesOf = (tableau, number)=> {
+const getMultiplesOf = (tableau, number) => {
   return tableau.filter(x => {
-    if (x % number === 0) {
-      return x
+    for (i = 0; i < tableau.length - 1; i++) {
+      if (x % number === 0) {
+        return true
+      }
     }
+    return false  
   })
 };
 

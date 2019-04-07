@@ -32,9 +32,13 @@ const allNames = [
 ]
 const keepStarks = tableau => {
   return tableau.filter(x => {
-    if (x.includes("Stark")){
-      return x
+    for (i = 0; i < tableau.length - 1; i++) {
+      if (x.includes("Stark")) {
+        return true
+      }
     }
+    return false 
+
   })
 }
 
